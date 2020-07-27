@@ -1,0 +1,67 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- say_hello_world
+- students_want_to_ask
+- display_topics
+- students_does_not_want_to_ask
+- topic_selected_by_student
+- email_entered_by_student
+- thanks
+responses:
+  utter_greet:
+  - buttons:
+    - payload: Yes
+      title: Yes I have
+    - payload: No
+      title: No I don't
+    text: "Hey! Do you want to learn?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Chai."
+
+  utter_subjects:
+  - buttons:
+    - payload: History
+      title: History
+    - payload: Geography
+      title: Geography
+    - payload: Science
+      title: Science
+    text: "Choose one"
+
+  utter_see_you_soon:
+  - text: "Study well. I'm here to help."
+
+  utter_thanks:
+  - text: "My pleasure :)"
+
+  utter_said_no:
+    - text: "No worries! Please reach to me when needed :)"
+actions:
+- action_hello_world
+- show_topic
+- manage_response
+- send_email
